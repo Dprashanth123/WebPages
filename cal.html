@@ -1,0 +1,88 @@
+<html lang="en">
+ <head>
+  <title>Document</title>
+ </head>
+ <body>
+ <div style="margin:200px 400px 0px 300px;padding:50px 50px 50px 50px;background-color:#ff9966;box-shadow:0px 0px 18px #85929E">
+  <label style="font-weight:bold">Number1</label><input id="num1" style="outline:0px"></input><br><br>
+  <label style="font-weight:bold">Number2</label><input id="num2" style="outline:0px"></input><br></br>
+  <input type="button" value="add" onclick="add()" style="font-weight:bold"></input>
+  <input type="button" value="sub" onclick="sub()" style="font-weight:bold"></input>
+  <input type="button" value="mul" onclick="mul()" style="font-weight:bold"></input>
+  <input type="button" value="div" onclick="div()" style="font-weight:bold"></input>
+  <br></br>
+  <strong style="font-weight:bold">Result:</strong>
+  <label id="res" style="font-weight:bold;color:#66ff66;text-shadow:0px 0px 5px #009900"></label>
+  </div>
+ </body>
+</html>
+
+<script>
+function add()
+{
+var num1 = document.getElementById("num1").value
+var num2 = document.getElementById("num2").value
+var sum = parseInt(num1) + parseInt(num2)
+document.getElementById("res").innerHTML = sum
+}
+function sub()
+{
+var num1 = document.getElementById("num1").value
+var num2 = document.getElementById("num2").value
+var sub = parseInt(num1) - parseInt(num2)
+document.getElementById("res").innerHTML = sub
+}
+function mul()
+{
+var num1 = document.getElementById("num1").value
+var num2 = document.getElementById("num2").value
+var mul = parseInt(num1) * parseInt(num2)
+document.getElementById("res").innerHTML = mul
+}
+function div()
+{
+var num1 = document.getElementById("num1").value
+var num2 = document.getElementById("num2").value
+var div = parseInt(num1) / parseInt(num2)
+document.getElementById("res").innerHTML = div
+}
+function calculation()
+{
+     var op1 = document.getElementById("add1").checked
+     var op2 = document.getElementById("sub1").checked
+	 var op3 = document.getElementById("mul1").checked
+	 var op4 = document.getElementById("div1").checked
+ if( op1 == false && op2 == false && op3 == false && op4 == false)
+	{
+	 document.getElementById("sam").innerHTML = "Select Operation".fontcolor("red") 
+	 }
+ else if( op1 == true)
+	{
+	 var num1 = document.getElementById("num1").value
+     var num2 = document.getElementById("num2").value
+     var add = parseInt(num1) + parseInt(num2)
+     document.getElementById("sam").innerHTML = add
+	 	 }
+ else if( op2 == true)
+	{
+	 var num1 = document.getElementById("num1").value
+     var num2 = document.getElementById("num2").value
+     var sub = parseInt(num1) - parseInt(num2)
+     document.getElementById("sam").innerHTML = sub
+	 	 }
+ else if( op3 == true)
+	{
+	 var num1 = document.getElementById("num1").value
+     var num2 = document.getElementById("num2").value
+     var mul = parseInt(num1) * parseInt(num2)
+     document.getElementById("sam").innerHTML = mul
+	 }
+ else if( op4 == true)
+	{
+	 var num1 = document.getElementById("num1").value
+     var num2 = document.getElementById("num2").value
+     var div = parseInt(num1) / parseInt(num2)
+     document.getElementById("sam").innerHTML = div
+	 }
+}
+</script>
